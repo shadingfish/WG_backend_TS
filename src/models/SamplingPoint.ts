@@ -1,3 +1,5 @@
+// src/models/SamplingPoint.ts
+
 import mongoose, { Schema, Document, model } from 'mongoose';
 
 // Define GeoJSON Point interface

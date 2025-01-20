@@ -1,6 +1,6 @@
 // src/schemas/resolvers/fieldResolvers.ts
 
-import { Field, FieldDocument } from '../../models/Field';
+import { Field, FieldDocument } from '../../models/Field.js';
 
 const fieldResolvers = {
     Query: {

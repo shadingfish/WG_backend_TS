@@ -1,6 +1,6 @@
 // src/schemas/resolvers/samplingPointResolvers.ts
 
-import { SamplingPoint, SamplingPointDocument } from '../../models/SamplingPoint';
+import { SamplingPoint, SamplingPointDocument } from '../../models/SamplingPoint.js';
 
 // Define Query argument interfaces
 interface QueryArgs {

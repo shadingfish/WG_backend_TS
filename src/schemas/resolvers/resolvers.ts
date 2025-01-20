@@ -1,8 +1,8 @@
 // src/schemas/resolvers/resolvers.ts
 
-import analysisReportResolvers from './analysisReportResolvers';
-import fieldResolvers from './fieldResolvers';
-import samplingPointResolvers from './samplingPointResolvers';
+import analysisReportResolvers from './analysisReportResolvers.js';
+import fieldResolvers from './fieldResolvers.js';
+import samplingPointResolvers from './samplingPointResolvers.js';
 // import fileResolvers from './fileResolvers'; // Uncomment when file resolvers are needed
 
 // Combined Resolvers

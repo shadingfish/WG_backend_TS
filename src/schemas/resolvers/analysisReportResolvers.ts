@@ -1,6 +1,6 @@
 // src/schemas/resolvers/analysisReportResolvers.ts
 
-import { AnalysisReport, AnalysisReportDocument } from '../../models/AnalysisReport';
+import { AnalysisReport, AnalysisReportDocument } from '../../models/AnalysisReport.js';
 
 // Define Query argument interfaces
 interface QueryArgs {

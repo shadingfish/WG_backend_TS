@@ -21,9 +21,15 @@ const samplingPointTypeDefs = `#graphql
         }
 
         type Mutation {
-            getSamplingPoints: [SamplingPoint]
-            getSamplingPoint(id: ID!): SamplingPoint
-            getSamplingPointsByUserId(userId: String!): [SamplingPoint]
+            addSamplingPoint(
+                userId: String!
+                sampleId: String!
+                location: GeoPointInput!
+                samplingNote: String
+                samplingTime: String!
+                photoUrl: String
+            ): SamplingPoint
+            deleteSamplingPoint(id: ID!): String
         }
 
         input GeoPointInput {
