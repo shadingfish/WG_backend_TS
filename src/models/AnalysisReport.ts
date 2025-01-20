@@ -25,7 +25,7 @@ export interface AnalysisReportDocument extends Document {
     updatedAt: Date;
 }
 
-// 定义 Mongoose Schema
+// Mongoose Schema
 const AnalysisReportSchema = new Schema<AnalysisReportDocument>({
     userId: {
         type: String,

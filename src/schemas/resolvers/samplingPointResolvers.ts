@@ -1,7 +1,6 @@
 // src/schemas/resolvers/samplingPointResolvers.ts
 
 import { SamplingPoint, SamplingPointDocument } from '../../models/SamplingPoint';
-import { GraphQLResolveInfo } from 'graphql';
 
 // Define Query argument interfaces
 interface QueryArgs {

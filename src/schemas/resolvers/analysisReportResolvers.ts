@@ -1,7 +1,6 @@
 // src/schemas/resolvers/analysisReportResolvers.ts
 
 import { AnalysisReport, AnalysisReportDocument } from '../../models/AnalysisReport';
-import { GraphQLResolveInfo } from 'graphql';
 
 // Define Query argument interfaces
 interface QueryArgs {

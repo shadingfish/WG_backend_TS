@@ -1,7 +1,6 @@
 // src/schemas/resolvers/fieldResolvers.ts
 
 import { Field, FieldDocument } from '../../models/Field';
-import { GraphQLResolveInfo } from 'graphql';
 
 const fieldResolvers = {
     Query: {
@@ -19,7 +18,6 @@ const fieldResolvers = {
         getField: async (
             _: unknown,
             { id }: { id: string },
-            __: GraphQLResolveInfo
         ): Promise<FieldDocument | null> => {
             try {
                 return await Field.findById(id);
@@ -33,7 +31,6 @@ const fieldResolvers = {
         getFieldsByUserId: async (
             _: unknown,
             { userId }: { userId: string },
-            __: GraphQLResolveInfo
         ): Promise<FieldDocument[]> => {
             try {
                 return await Field.find({ userId });
@@ -49,7 +46,6 @@ const fieldResolvers = {
         addField: async (
             _: unknown,
             args: Partial<FieldDocument>,
-            __: GraphQLResolveInfo
         ): Promise<FieldDocument> => {
             try {
                 const newField = new Field({
