@@ -47,4 +47,4 @@ const PestSchema = new Schema<PestDocument>({
 
 
 // Export Mongoose model
-export const SamplingPoint = model<PestDocument>('SamplingPoint', PestSchema);
+export const Pest = model<PestDocument>('Pest', PestSchema);

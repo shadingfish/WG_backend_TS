@@ -1,9 +1,6 @@
 // src/schemas/resolvers/pestResolvers.ts
 
-import { PestDocument } from '../../models/Pest';
-import mongoose from 'mongoose';
-
-const Pest = mongoose.model<PestDocument>('SamplingPoint');
+import { Pest, PestDocument } from '../../models/Pest.js';
 
 // Define Query argument interface
 interface PestQueryArgs {
