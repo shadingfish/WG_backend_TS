@@ -1,24 +1,48 @@
 // src/schemas/resolvers/pestResolvers.ts
 
 import { Pest, PestDocument } from '../../models/Pest.js';
+import { GraphQLUpload } from 'graphql-upload-ts';
+import { importPestSpreadsheet, exportPestSpreadsheet } from '../../controllers/pestSpreadsheetController.js';
 
 // Define Query argument interface
 interface PestQueryArgs {
     id?: string;
     commonName?: string;
-    LatinName?: string;
+    latinName?: string;
 }
 
 // Define Mutation argument interface
 interface PestMutationArgs {
     commonName: string;
-    LatinName: string;
+    latinName: string;
     description: string;
+    distribution?: string[];
+    economicThreshold?: number;
     treatment?: string;
+    hardToDetect?: boolean;
+    singleDetectionSevere?: boolean;
     imageURL?: string;
 }
 
+interface PestUpdateArgs {
+    id: string;
+    commonName?: string;
+    latinName?: string;
+    description?: string;
+    distribution?: string[];
+    economicThreshold?: number;
+    treatment?: string;
+    hardToDetect?: boolean;
+    singleDetectionSevere?: boolean;
+    imageURL?: string;
+}
+
+interface PestDeleteArgs {
+    id: string;
+}
+
 const pestResolvers = {
+    Upload: GraphQLUpload,
     Query: {
         // Get all pest records
         getAllPests: async (): Promise<PestDocument[]> => {
@@ -57,15 +81,15 @@ const pestResolvers = {
         },
 
         // Get a single pest by Latin name
-        getPestByLatinName: async (_: unknown, { LatinName }: PestQueryArgs): Promise<PestDocument | null> => {
-            if (!LatinName) {
+        getPestByLatinName: async (_: unknown, { latinName }: PestQueryArgs): Promise<PestDocument | null> => {
+            if (!latinName) {
                 throw new Error("Latin name is required");
             }
             try {
-                return await Pest.findOne({ LatinName });
+                return await Pest.findOne({ latinName });
             } catch (error) {
-                console.error(`Error fetching pest with Latin name ${LatinName}:`, error);
-                throw new Error(`Failed to fetch pest with Latin name ${LatinName}`);
+                console.error(`Error fetching pest with Latin name ${latinName}:`, error);
+                throw new Error(`Failed to fetch pest with Latin name ${latinName}`);
             }
         },
     },
@@ -73,19 +97,52 @@ const pestResolvers = {
     Mutation: {
         // Add a new pest record
         addPest: async (_: unknown, args: PestMutationArgs): Promise<PestDocument> => {
-            const newPest = new Pest({
-                ...args,
-                createdAt: new Date(),
-                updatedAt: new Date(),
-            });
+            const newPest = new Pest({ ...args });
             try {
-                const savedPest = await newPest.save();
-                return savedPest;
+                return await newPest.save();
             } catch (error) {
                 console.error("Error saving pest:", error);
                 throw new Error("Failed to save the pest");
             }
         },
+    
+        // Update existing pest by ID
+        updatePest: async (_: unknown, args: PestUpdateArgs): Promise<PestDocument | null> => {
+            const { id, ...updateFields } = args;
+            try {
+                const updated = await Pest.findByIdAndUpdate(
+                    id,
+                    { ...updateFields, updatedAt: new Date() },
+                    { new: true } // Return the updated document
+                );
+                if (!updated) {
+                    throw new Error(`Pest with ID ${id} not found`);
+                }
+                return updated;
+            } catch (error) {
+                console.error("Error updating pest:", error);
+                throw new Error("Failed to update the pest");
+            }
+        },
+    
+        // Delete pest by ID
+        deletePest: async (_: unknown, { id }: PestDeleteArgs): Promise<boolean> => {
+            try {
+                const result = await Pest.findByIdAndDelete(id);
+                return !!result;
+            } catch (error) {
+                console.error("Error deleting pest:", error);
+                throw new Error("Failed to delete the pest");
+            }
+        },
+
+        importPestSpreadsheet: async (_: any, { file }: any) => {
+            return await importPestSpreadsheet(file);
+        },
+
+        exportPestSpreadsheet: async (_: any, { data, format }: any) => {
+            return await exportPestSpreadsheet(data, format);
+        }
     },
 };
 
