@@ -1,0 +1,201 @@
+Student agrees to occupy the following University housing, according to the terms and conditions of this Agreement: Nuevo West BRISA BI-0612-4
+
+STUDENT Dingyi Yu (PID: A69032042)
+DOB: 11/11/2000 Phone: +86 18256750606
+Additional Occupants(s): 
+
+Mailing Address
+3834
+3869 Miramar Street
+La Jolla, CA 92092
+
+Beijing Headquarters
+John Wiley Business Services (Beijing) Co., Ltd.
+Room 805-808, 8th Floor, Taiyanggong Building
+12A Taiyanggong Zhong Road, Chaoyang District, Beijing, 100028
+Tel: +86-10-8418 7800
++861084187800
+Fax: +86-10-8418 7810
+
+Shanghai Branch
+John Wiley Business Services (Beijing) Co., Ltd. Shanghai Branch
+Wiley Information Technology (Shanghai) Co., Ltd.
+Units AB, 15th Floor, New Union Square Phase II
+506 Shangcheng Road, Pudong New District, Shanghai, 200120
+Tel: +86-21-80361200
+Fax: +86-21-61601661
+
+
+eBay
+Address: No. 88 Keyuan Road, Pudong, Shanghai, China, 201203
+Province: Shanghai
+Junhao Wu
++862123167000
+
+
+Alireza (Ali) Pourreza, Ph.D
+Associate Professor of Cooperative Extension
+- Biological and Agricultural Engineering
+- (530) 752-9290
+University of California, Davis, One Shields Avenue, Davis, CA 95616 | 530-752-1011
+
+
+https://github.com/shadingfish
+https://www.linkedin.com/in/dingyi-yu-a79219274/
+https://drive.google.com/file/d/1_t0jkYybYQdMnInUO_hTz5xwwaD54QmG/view?usp=drive_link
+People's Republic of China
+
+
+
+
+
+我在申请  的   岗位
+
+这是我的简历：
+
+
+
+这是岗位介绍：
+
+
+
+帮我使用英文回答这些问题：
+
+
+
+你的回答必须个性化，显得像真人而非AI，可以稍微加非常少的口语化部分，不要太长。。你应该从我的经历与岗位的匹配度，以及我的价值观和公司的契合的角度回答。回答必须合理，真实，礼貌。不要只考虑最近的经历而要考虑最契合的经历。句型句式必须丰富不像AI（比如可以使用一部分I xxx句式，可以使用一部分其他句式）。
+
+另外我也是一名gay，也可以加上非常少的一点（一句话）关于LGBT的内容。
+
+
+
+
+
+我在申请  的   岗位
+
+这是我的简历：
+
+
+
+这是岗位介绍：
+
+
+
+帮我使用英文写一封cover letter：
+
+
+
+你的回答必须个性化，显得像真人而非AI，可以稍微加非常少的口语化部分，不要太长。。你应该从我的经历与岗位的匹配度，以及我的价值观和公司的契合的角度回答。回答必须合理，真实，礼貌。不要只考虑最近的经历而要考虑最契合的经历。句型句式必须丰富不像AI（比如可以使用一部分I xxx句式，可以使用一部分其他句式）。
+
+帮我直接给这份CV提供一个pdf下载链接，让我可以直接下载，并且按照公司名字给文件命名，不要试图输出代码，我需要可以直接点击的下载链接。
+
+另外我也是一名gay，也可以加上非常少的一点（一句话）关于LGBT的内容。
+
+
+
+
+这个案例错了：
+
+
+
+期望输出是：
+
+
+
+实际输出是：
+
+
+
+我是否抄错了你的代码？
+
+如果没抄错，记得修改的时候尽量保留原本的变量名和代码结构，减少我的工作量。
+
+
+
+
+
+
+详细提取出这道题所有的英文详细介绍，测试案例以及代码框架。
+代码不要放到代码框里，不要使用特殊格式的数学公式，不然我不好复制。
+
+
+
+
+
+这道题的解法先使用中文描述思路，分精要版和详细版，再使用英文描述思路，分精要版和详细版。在使用中英文分别给出详细的复杂度分析。注意讲解过程中一些tricky的地方要描述出来，所有的内容输出到代码框内
+
+
+使用Java详细回答这道题，必须尽全力回答正确，必须使用极为简短的变量名，尽力修整代码结构和做法，来减少我的工作量。
+
+
+
+
+
+
+这是一个Linkedin用户
+
+
+这是我的信息：
+
+
+我在申请 公司的这个岗位：
+
+
+这是岗位链接：
+
+我和他都认识Can Cao，她是我本科时的学姐，这也是我为何找到了他。
+
+我想请求他帮我refer，并且附上我简历附件，姓名，邮箱，岗位名称，Job id，岗位链接，以及第三人称简述。
+
+请帮我写一条简洁，礼貌且清晰得体的信息。
+
+
+下面我会问你一些算法题，使用Java回答并给出以下内容：
+1.详细的题目分析和解题思路的中英文
+2.详细的解题代码，用Java（中英文注释）
+3.复杂度分析和可能的follow up及其解答，中英文
+
+输出的中英文请按照一句中文一句英文的格式输出
+
+
+接下来我会给你一些我的背景信息，你要使用这些信息极为详细地回答可能被问到的BQ问题，使用中英文。
+
+回答一下这道题
+
+
+表达式计算题目。input是String，写函数求出答案，题目在图片里，有几个常见的运算方式
+
+Jkabdhahkd
+daomaidesiquanjia@
+
+
+这道题用Python怎么写，你要使用中文和英文翻译（必须一段中文一段英文）详细给出题目分析与解题思路，解题代码，复杂度分析与可能的follow up。题目分析与解题思路时要像面试那样一步一步想出思路而不是直接给出答案，一步步思考后给出完整的方案。一开始的解答可以非最优，之后follow up里面优化。输出不要带任何结构复杂的数学公式（比如斜体，不同字体，时间复杂度也不要用斜体，例如只使用最简单的次幂表示2^3 = 8），否则我不方便复制。
+
+详细使用中英文（一小段中文+一小段英文翻译）解释一下怎么实现的，比较细节分点的内容写成一整段，在段内使用1）2）3）这样标出而不要采用列表格式（非常重要！！！！，可以在较高的层次上分节，但是尽量不要在细节上使用分很多行的列表格式），注意附上关键必要的代码，同时对一些重要的数据结构和方法进行解释。如果方便的话，最好尝试绘制一下流程图
+
+考虑 面试。
+首先我怎么使用一段话简洁地介绍 ，同时给出面试官后续提问的空间，把面试内容引向简单的预先准备好的实现部分。同时考虑面试官可能会问的问题。详细使用中英文（一小段中文+一小段英文翻译）回答。
+
+I am using CPT for summer internship and using H4 for future work
+I am on F-1 Visa and using CPT for summer internship and using OPT/H1B/H4 for future work
+
+
+详细翻译一下题目，输出不要带任何结构复杂的数学公式（比如斜体，不同字体，例如只使用最简单的次幂表示2^3 = 8）
+然后给出Python解题代码（要有解析）
+
+
+
+
+
+Referral request for summer intern position
+
+Hi ,
+
+Nice to meet you!
+My name is Dingyi Yu, as a UCSD CSE alumni, I want to ask could give me a referral for your company's summer Software Engineer internship position?
+
+Looking forward to your response, thank you so much!
+
+Best
+Dingyi
+

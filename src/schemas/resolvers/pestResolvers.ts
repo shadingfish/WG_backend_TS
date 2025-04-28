@@ -1,7 +1,7 @@
 // src/schemas/resolvers/pestResolvers.ts
 
 import { Pest, PestDocument } from '../../models/Pest.js';
-import { GraphQLUpload } from 'graphql-upload-ts';
+import { GraphQLUpload } from 'graphql-upload';
 import { importPestSpreadsheet, exportPestSpreadsheet } from '../../controllers/pestSpreadsheetController.js';
 
 // Define Query argument interface
@@ -42,7 +42,6 @@ interface PestDeleteArgs {
 }
 
 const pestResolvers = {
-    Upload: GraphQLUpload,
     Query: {
         // Get all pest records
         getAllPests: async (): Promise<PestDocument[]> => {
@@ -136,13 +135,11 @@ const pestResolvers = {
             }
         },
 
-        importPestSpreadsheet: async (_: any, { file }: any) => {
-            return await importPestSpreadsheet(file);
-        },
-
-        exportPestSpreadsheet: async (_: any, { data, format }: any) => {
-            return await exportPestSpreadsheet(data, format);
-        }
+        importPestSpreadsheet: async (_: any, { file }: { file: Promise<any> }) =>
+            importPestSpreadsheet(file),
+      
+        exportPestSpreadsheet: async (_: any, { data, format }) =>
+        exportPestSpreadsheet(data, format),
     },
 };
 

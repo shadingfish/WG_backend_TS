@@ -39,7 +39,12 @@ import { ApolloServer } from 'apollo-server-express';
 import typeDefs from './schemas/typeDefs/typeDefs.js';
 import resolvers from './schemas/resolvers/resolvers.js';
 import connectDB from './config/db.js';
-import { graphqlUploadExpress } from 'graphql-upload-ts';
+// import { graphqlUploadExpress } from 'graphql-upload-ts';
+import { graphqlUploadExpress } from 'graphql-upload';
+import cors from 'cors';
+const {
+  ApolloServerPluginLandingPageLocalDefault,
+} = require('apollo-server-core');
 
 const PORT = process.env.PORT || 4000;
 
@@ -48,21 +53,33 @@ const startServer = async () => {
     console.log(`🔌 Connecting MongoDB...`);
     await connectDB();
 
-    const app = express();
-
-    app.use(graphqlUploadExpress());
-
     const server = new ApolloServer({
       typeDefs,
       resolvers,
+      // Using graphql-upload without CSRF prevention is very insecure.
+      // csrfPrevention: true,
+      cache: 'bounded',
+      plugins: [
+        ApolloServerPluginLandingPageLocalDefault({ embed: true }),
+      ],
     });
 
     await server.start();
-    server.applyMiddleware({ app }); // default path is /graphql
 
-    app.listen(PORT, () => {
-      console.log(`🚀 Server ready at http://localhost:${PORT}${server.graphqlPath}`);
-    });
+    const app = express();
+
+    app.use(cors()); // ✅ Allow Apollo Sandbox access
+    app.use(graphqlUploadExpress({ maxFileSize: 10_000_000, maxFiles: 1 })); // ✅ 上传中间件
+
+    server.applyMiddleware({ app });
+
+    await new Promise<void>(r => app.listen({ port: 4000 }, r));
+
+    console.log(`🚀 Server ready at http://localhost:${PORT}${server.graphqlPath}`);
+
+    // app.listen(PORT, () => {
+    //   console.log(`🚀 Server ready at http://localhost:${PORT}${server.graphqlPath}`);
+    // });
   } catch (error) {
     console.error('❌ Failed to start server:', error);
     process.exit(1);

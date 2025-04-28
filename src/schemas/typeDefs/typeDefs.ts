@@ -5,15 +5,19 @@ import fieldTypeDefs from './fieldTypeDefs.js';
 import samplingPointTypeDefs from './samplingPointTypeDefs.js';
 import pestTypeDefs from './pestTypeDefs.js';
 import { DocumentNode } from 'graphql';
+import testTypeDefs from './testTypeDefs.js';
+import scalars from "./scalars.js";
 // import fileTypeDefs from './fileTypeDefs'; // Uncomment when file typedefs are ready
 
 // Merge all typeDefs as an array of strings or DocumentNodes
 const typeDefsArray = [
+    scalars,
     analysisReportTypeDefs,
     fieldTypeDefs,
     samplingPointTypeDefs,
     // fileTypeDefs, // Uncomment when file typedefs are ready
-    pestTypeDefs
+    pestTypeDefs,
+    testTypeDefs
 ];
 
 const typeDefs: DocumentNode  = mergeTypeDefs(typeDefsArray);

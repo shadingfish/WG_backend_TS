@@ -6,11 +6,18 @@
       "outDir": "dist",
       "lib": ["es2020"],
       "target": "es2020",
-      "module": "esnext",
+      // "module": "esnext",
+      "module": "commonjs",
       "moduleResolution": "node",
       "esModuleInterop": true,
+      "skipLibCheck": true,
       "types": ["node"]
     },
     "include": ["src/**/*"],
     "exclude": ["node_modules"]
   }
+
+  // 如果在package.json里面加上 "type": "module"，
+  // Node.js 会把所有 .js 文件都当作 ESM 处理，
+  // 哪怕你写的是 require() 语法也会报错。
+  // 这时候必须在这个文件里加上"module": "esnext",
